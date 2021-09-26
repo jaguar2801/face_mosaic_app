@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Upload</title>
+    </head>
+    <body>
+ 
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Upload</button>
+        </form>
+        
+    <tr>
+        <td>{{ obj.description }}</td>
+        <!--<td>{{ obj.gray_photo.url }}</td>-->
+        <td><img src="../../../media/output/output.jpg" width="500" height="500"/></td>
+        <td>{{ obj.uploaded_at }}</td>
+    </tr>
+    </body>
+</html>
